@@ -50,24 +50,6 @@ main {
 	background-color: #78FF6C;
 }
 
-.news-contener {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
-	padding: 0 0 0 10px;
-}
-
-.news-contener p {
-	grid-column: 2 / 3;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 20px;
-	background-color: #3F9338;
-	border-radius: 10px;
-	padding: 5px;
-}
-
 footer {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);

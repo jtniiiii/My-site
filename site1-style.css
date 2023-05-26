@@ -1,4 +1,3 @@
-/* В artical p не прижимается к низу, хотя все свойства для этого есть. */
 * {
 	margin: 0;
 }
@@ -48,74 +47,49 @@ h1 {
 
 main {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
 	padding: 20px 10px 20px 10px;
+	font-size: 20px;
 	background-color: #78FF6C;
 }
 
-.search-contener {
-	grid-column: 2 / 3;
-	display: flex;
-	background-color: #54A94C;
-	border-radius: 10px;
-}
-
-.search-button {
-	background-color: #54A94C;
-	border: 0;
-	border-radius: 10px;
-}
-
-.search-input {
-	width: auto;
-	display: flex;
-	justify-content: flex-start;
-	background-color: #54A94C;
-	font-size: 40px;
-	padding: 0;
-	border: 0;
-	border-radius: 10px;
-}
-
-.news-contener {
-	grid-column: 1 / 4;
+.img-content {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
+	gap: 10px;
 }
 
-article {
-	height: auto;
-	background-color: #FFFFFF;
-	font-size: 20px;
+h2 {
+	font-size: 25px;
+}
+
+.img-content ul {
 	border-radius: 10px;
+	background-color: #54A94C;
 }
 
-article a {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	color: #000000;
-	text-decoration: none;
+.text-contener {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 10px;
+}
+
+.recipe-content {
+	grid-column: 1 / 3;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px 20px;
 }
 
 .responsive-img {
 	max-width: 100%;
 }
 
-article a h3 {
-	max-width: 210px;
-	background-color: #54A94C;
-	margin: 10px 0 10px 0;
-	padding: 0 0 0 5px;
-	border-radius: 0 10px 10px 0;
-}
-
-article a p {
-	background-color: #54A94C;
+ article p {
 	padding: 5px;
-	border-radius: 0 0 10px 10px;
+	margin: 10px 0 0 0;
+	border-radius: 10px;
+	background-color: #54A94C;
 }
 
 footer {

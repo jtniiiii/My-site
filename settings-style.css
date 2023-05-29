@@ -56,24 +56,8 @@ h1 {
 }
 
 main {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: auto auto;
-	gap: 20px;
 	background-color: #78FF6C;
 	padding: 20px 10px;
-}
-
-.logo-max {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #54A94C;
-	border-radius: 10px;
-}
-
-.just-text {
-	grid-column: 1 / 3;
 }
 
 footer {

@@ -1,14 +1,24 @@
-/* В artical p не прижимается к низу, хотя все свойства для этого есть. */
 * {
 	margin: 0;
 }
 
+.page-container {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.responsive-img {
+	max-width: 100%;
+	min-width: 100%;
+}
+
 header {
 	display: grid;
-	grid-template-columns: auto 1fr 1fr auto;
+	grid-template-columns: auto 1fr auto;
 	gap: 20px;
-	padding: 10px;
 	background-color: #54A94C;
+	padding: 10px;
 }
 
 .logo {
@@ -20,62 +30,60 @@ header {
 }
 
 h1 {
-	grid-column: 2 / 4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 34px;
 	background-color: #3F9338;
-	font-size: 50px;
-	margin: 15px;
 	border-radius: 10px;
+	margin: 15px 0;
 }
 
 .user {
-	grid-column: 4 / 5;
 	display: grid;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: repeat(2, 1fr);
 	gap: 10px;
 }
 
 .user-button {
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
 	background-color: #3F9338;
-	font-size: 32px;
 	border-radius: 10px;
+	padding: 5px;
 }
 
 main {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto 1fr;
 	gap: 20px;
-	padding: 20px 10px 20px 10px;
 	background-color: #78FF6C;
+	padding: 20px 10px;
 }
 
 .search-contener {
+	max-height: 45px;
 	grid-column: 2 / 3;
-	display: flex;
-	background-color: #54A94C;
+	display: grid;
+	grid-template-columns: auto 1fr;
 	border-radius: 10px;
+	padding: 5px;
 }
 
 .search-button {
 	background-color: #54A94C;
-	border: 0;
-	border-radius: 10px;
+	border-radius: 10px 0 0 10px;
 }
 
 .search-input {
-	width: auto;
-	display: flex;
-	justify-content: flex-start;
+	width: 100%;
+	font-size: 25px;
 	background-color: #54A94C;
-	font-size: 40px;
-	padding: 0;
 	border: 0;
-	border-radius: 10px;
+	border-radius: 0 10px 10px 0;
 }
 
 .news-contener {
@@ -86,36 +94,34 @@ main {
 }
 
 article {
-	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	background-color: #FFFFFF;
-	font-size: 20px;
 	border-radius: 10px;
 }
 
 article a {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	color: #000000;
 	text-decoration: none;
 }
 
-.responsive-img {
-	max-width: 100%;
-}
-
-article a h3 {
+article a h2 {
 	max-width: 210px;
 	background-color: #54A94C;
-	margin: 10px 0 10px 0;
-	padding: 0 0 0 5px;
 	border-radius: 0 10px 10px 0;
+	margin: 10px 0;
+	padding: 0 0 0 5px;
 }
 
 article a p {
 	background-color: #54A94C;
-	padding: 5px;
 	border-radius: 0 0 10px 10px;
+	padding: 5px;
+}
+
+.empty-container {
+	grid-column: 1 / 4;
 }
 
 footer {
@@ -124,13 +130,6 @@ footer {
 	gap: 20px;
 	background-color: #54A94C;
 	padding: 10px;
-	font-size: 20px;
-}
-
-.footer-item {
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	gap: 10px 20px;
 }
 
 .footer-item a {
@@ -139,6 +138,16 @@ footer {
 	border-bottom: 1px solid #000000;
 }
 
+.footer-item {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	gap: 10px 20px;
+}
+
 .footer-img {
 	display: flex;
+}
+
+.footer-img .responsive-img {
+	min-width: 0;
 }

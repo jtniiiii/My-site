@@ -141,7 +141,7 @@ footer {
 .footer-item {
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
-	gap: 10px 20px;
+	gap: 10px;
 }
 
 .footer-img {

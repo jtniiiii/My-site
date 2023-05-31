@@ -1,3 +1,10 @@
+@media (max-width: 930px) {
+	footer {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto auto;
+	}
+}
+
 @media (max-width: 600px) {
 	header {
 		grid-template-columns: auto 1fr;
@@ -9,9 +16,14 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 1fr;
 	}
-	
-	footer {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto auto;
+
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, auto);
+		gap: 10px;
 	}
+
+	.just-text {
+	    grid-column: 1 / 2;
+    }
 }

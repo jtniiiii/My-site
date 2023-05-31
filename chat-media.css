@@ -1,15 +1,4 @@
-@media (max-width: 600px) {
-	header {
-		grid-template-columns: auto 1fr;
-		gap: 5px;
-	}
-
-	.user {
-		grid-column: 1 / 3;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1fr;
-	}
-
+@media (max-width: 930px) {
 	main {
 		grid-template-columns: 1fr;
 		gap: 5px;
@@ -17,11 +6,38 @@
 
 	main p {
 		grid-column: 1 / 2;
-		margin: 0 30px;
+		margin: 0 200px;
 	}
 
+	article a h2 {
+		max-width: 500px;
+	}
 	footer {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto auto;
+	}
+}
+
+@media (max-width: 768px) {
+	main p {
+		grid-column: 1 / 2;
+		margin: 0 100px;
+	}
+}
+
+@media (max-width: 600px) {
+	header {
+		grid-template-columns: auto 1fr;
+		gap: 5px;
+	}
+
+	main p {
+		margin: 0 30px;
+	}
+
+	.user {
+		grid-column: 1 / 3;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
 	}
 }
